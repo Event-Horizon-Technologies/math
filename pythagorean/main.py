@@ -66,6 +66,7 @@ class PythagoreanTheorem(Scene):
 
         l4 = deepcopy(self.t)
         r4 = deepcopy(self.t)
+        self.remove(self.t)
         self.play(AnimationGroup(
             Rotate(l4, TAU / 2),
             Rotate(r4, TAU / 2)
