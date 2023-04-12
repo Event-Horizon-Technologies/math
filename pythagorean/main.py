@@ -11,9 +11,9 @@ MARGIN = (B - A) / 2
 
 class PythagoreanTheorem(Scene):
     def create_shapes(self):
-        self.a = VGroup(Square(A, color=RED, fill_opacity=1), MathTex("a^2", color=WHITE))
-        self.b = VGroup(Square(B, color=BLUE, fill_opacity=1), MathTex("b^2", color=WHITE))
-        self.c = VGroup(Square(C, color=GREEN, fill_opacity=1), MathTex("c^2", color=WHITE).rotate(-TH))
+        self.a = VGroup(Square(A, stroke_width=0, color=RED, fill_opacity=1), MathTex("a^2", color=WHITE))
+        self.b = VGroup(Square(B, stroke_width=0, color=BLUE, fill_opacity=1), MathTex("b^2", color=WHITE))
+        self.c = VGroup(Square(C, stroke_width=0, color=GREEN, fill_opacity=1), MathTex("c^2", color=WHITE).rotate(-TH))
 
         self.a.move_to((A + B) / 2 * LEFT)
         self.b.move_to((A + B) / 2 * DOWN)
