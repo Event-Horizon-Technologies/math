@@ -67,36 +67,24 @@ class PythagoreanTheorem(Scene):
         self.l2 = deepcopy(self.t)
         self.r2 = deepcopy(self.t)
         self.play(AnimationGroup(
-            Rotate(self.l2, TAU / 4, about_point=ORIGIN),
-            Rotate(self.r2, TAU / 4, about_point=ORIGIN)
-        ))
-        self.play(AnimationGroup(
-            ApplyMethod(self.l2.shift, (SHIFT + B - MARGIN) * LEFT + (A + MARGIN) * UP),
-            ApplyMethod(self.r2.shift, (SHIFT + B - MARGIN) * RIGHT + MARGIN * UP)
-        ))
+            Transform(self.l2, self.l2.copy().rotate(TAU / 4).shift((SHIFT + B - MARGIN) * LEFT + (A + MARGIN) * UP))),
+            Transform(self.r2, self.r2.copy().rotate(TAU / 4).shift((SHIFT + B - MARGIN) * RIGHT + MARGIN * UP)
+        ), run_time=RUN_TIME / 2)
 
         self.l3 = deepcopy(self.t)
         self.r3 = deepcopy(self.t)
         self.play(AnimationGroup(
-            Rotate(self.l3, -TAU / 4, about_point=ORIGIN),
-            Rotate(self.r3, -TAU / 4, about_point=ORIGIN)
-        ))
-        self.play(AnimationGroup(
-            ApplyMethod(self.l3.shift, (SHIFT + A + MARGIN) * LEFT + (A + MARGIN) * UP),
-            ApplyMethod(self.r3.shift, (SHIFT - MARGIN) * RIGHT + (A + MARGIN) * UP)
-        ))
+            Transform(self.l3, self.l3.copy().rotate(-TAU / 4).shift((SHIFT + A + MARGIN) * LEFT + (A + MARGIN) * UP)),
+            Transform(self.r3, self.r3.copy().rotate(-TAU / 4).shift((SHIFT - MARGIN) * RIGHT + (A + MARGIN) * UP))
+        ), run_time=RUN_TIME / 2)
 
         self.l4 = deepcopy(self.t)
         self.r4 = deepcopy(self.t)
         self.remove(self.t)
         self.play(AnimationGroup(
-            Rotate(self.l4, TAU / 2, about_point=ORIGIN),
-            Rotate(self.r4, TAU / 2, about_point=ORIGIN)
-        ))
-        self.play(AnimationGroup(
-            ApplyMethod(self.l4.shift, SHIFT * LEFT),
-            ApplyMethod(self.r4.shift, (SHIFT + A) * RIGHT + B * UP)
-        ))
+            Transform(self.l4, self.l4.copy().rotate(TAU / 2).shift(SHIFT * LEFT)),
+            Transform(self.r4, self.r4.copy().rotate(TAU / 2).shift((SHIFT + A) * RIGHT + B * UP))
+        ), run_time=RUN_TIME / 2)
 
     def change_a_and_b(self, d):
         global A, B, C, TH
