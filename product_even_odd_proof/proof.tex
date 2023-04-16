@@ -12,8 +12,63 @@
 
 \section{Proof that the product of two even numbers are even}
 
-\textbf{Definition:} An even number is any number that is divisible by 2. This means that any even number can be written in the form $x = 2n$ where $n \in \mathbb{Z}$
+\textbf{Definition:} An even number is any number that is divisible by 2. This means that any even number can be written in the form $x = 2n$ where $n \in \mathbb{Z}$ (The set of integers is denoted by $\mathbb{Z} = \{..., -2, -1, 0, 1, 2, ...\}$
 
-Let $a,b \in \mathbb{Z}$
+Let $a,b \in \mathbb{Z}$, where $a$ and $b$ are even numbers. This means they can be written as follows:
+
+\begin{align*}
+    a &= 2m \\
+    b &= 2n
+\end{align*}
+
+\noindent where $m, n \in \mathbb{Z}$. Then:
+
+\begin{align*}
+    ab &= (2m)(2n) \\
+    &= 4mn \\
+    &= 2(2mn)
+\end{align*}
+
+\noindent Let $l = 2mn$. Since $\mathbb{Z}$ is closed under multiplication, then $2mn \in \mathbb{Z}$, and therefore, $l \in \mathbb{Z}$. Then $ab$ is, by definition, an even number, since $ab = 2l$, where $l \in \mathbb{Z}$. Therefore, any even number times an even number is even itself. $\blacksquare$
+
+\section{Proof that the product of two odd numbers are odd}
+
+\textbf{Definition:} An odd number is any number that is not divisible by 2. This means that any odd number can be written in the form $x = 2n + 1$ where $n \in \mathbb{Z}$ (The set of integers is denoted by $\mathbb{Z} = \{..., -2, -1, 0, 1, 2, ...\}$
+
+Let $a,b \in \mathbb{Z}$, where $a$ and $b$ are odd numbers. This means they can be written as follows:
+
+\begin{align*}
+    a &= 2m + 1 \\
+    b &= 2n + 1
+\end{align*}
+
+\noindent where $m, n \in \mathbb{Z}$. Then:
+
+\begin{align*}
+    ab &= (2m + 1)(2n + 1) \\
+    &= 4mn + 2m + 2n + 1 \\
+    &= 2(2mn + m + n) + 1
+\end{align*}
+
+\noindent Let $l = 2mn + m + n$. Since $\mathbb{Z}$ is closed under addition and multiplication, then $2mn + m + n \in \mathbb{Z}$, and therefore, $l \in \mathbb{Z}$. Then $ab$ is, by definition, an odd number, since $ab = 2l + 1$, where $l \in \mathbb{Z}$. Therefore, any odd number times an odd number is odd itself. $\blacksquare$
+
+\section{Proof that the product of an even number and an odd number is even}
+
+Let $a,b \in \mathbb{Z}$, where $a$ is even and $b$ is odd. This means they can be written as follows:
+
+\begin{align*}
+    a &= 2m \\
+    b &= 2n + 1
+\end{align*}
+
+\noindent where $m, n \in \mathbb{Z}$. Then:
+
+\begin{align*}
+    ab &= (2m)(2n + 1) \\
+    &= 4mn + 2m \\
+    &= 2(2mn + m)
+\end{align*}
+
+\noindent Let $l = 2mn + m$. Since $\mathbb{Z}$ is closed under addition and multiplication, then $2mn + m \in \mathbb{Z}$, and therefore, $l \in \mathbb{Z}$. Then $ab$ is, by definition, an even number, since $ab = 2l$, where $l \in \mathbb{Z}$. Therefore, any odd number times an odd number is odd itself. $\blacksquare$
 
 \end{document}
