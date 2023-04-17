@@ -133,9 +133,11 @@ class PythagoreanTheorem(Scene):
     def construct(self):
         self.create_shapes()
         self.move_squares()
+        self.wait(RUN_TIME)
         self.move_triangles()
+        self.wait(RUN_TIME)
         _A, _B = A, B
         self.change_a_and_b(B / 2)
         self.change_a_and_b(-A / 2)
         self.change_a_and_b(_A - A)
-        self.wait(3)
+        self.wait(RUN_TIME)
